@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Lok | The King of High Ticket Sales</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght:700;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0A0A0A;
+            --dark-gray: #1A1A1A;
+            --medium-gray: #2A2A2A;
+            --light-gray: #CCCCCC;
+            --white: #FFFFFF;
+            --red-accent: #C41E3A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .cta-button {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            border: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 26, 0.8) 100%),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(212, 175, 55, 0.03) 2px, rgba(212, 175, 55, 0.03) 4px);
+            z-index: 0;
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+        }
+        
+        .hero-eyebrow {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .hero h1 span {
+            color: var(--gold);
+            display: block;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--light-gray);
+            max-width: 700px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        
+        .secondary-button {
+            background: transparent;
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .secondary-button:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: var(--dark-gray);
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--light-gray);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 8rem 2rem;
+            position: relative;
+        }
+        
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .about-content h2 span {
+            color: var(--gold);
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            position: relative;
+            height: 600px;
+            background: var(--medium-gray);
+            border: 3px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+        
+        /* Programs Section */
+        .programs {
+            background: var(--dark-gray);
+            padding: 8rem 2rem;
+        }
+        
+        .programs-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-eyebrow {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--light-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .program-card {
+            background: var(--medium-gray);
+            padding: 3rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .program-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+        
+        .program-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .program-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .program-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .program-card p {
+            color: var(--light-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .program-card .cta-button {
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Voice AI Section */
+        .voice-ai {
+            padding: 8rem 2rem;
+            background: 
+                linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(10, 10, 10, 0.8) 100%);
+            position: relative;
+        }
+        
+        .voice-ai-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .voice-ai h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+        
+        .voice-ai h2 span {
+            color: var(--gold);
+        }
+        
+        .voice-ai > .voice-ai-container > p {
+            font-size: 1.3rem;
+            color: var(--light-gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+        
+        .widgets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .voice-widget-wrapper {
+            background: var(--medium-gray);
+            padding: 3rem;
+            border: 2px solid var(--gold);
+            position: relative;
+            min-height: 550px;
+        }
+        
+        .widget-label {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark);
+            padding: 0.5rem 2rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border: 2px solid var(--gold);
+            white-space: nowrap;
+        }
+        
+        .widget-description {
+            margin-top: 2rem;
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--dark);
+            padding: 8rem 2rem;
+        }
+        
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .testimonial-card {
+            background: var(--dark-gray);
+            padding: 3rem;
+            border-left: 4px solid var(--gold);
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--medium-gray);
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+        }
+        
+        .testimonial-info h4 {
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        
+        .testimonial-info p {
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .final-cta {
+            background: 
+                linear-gradient(135deg, var(--dark-gray) 0%, var(--dark) 100%);
+            padding: 10rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .final-cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .final-cta h2 span {
+            color: var(--gold);
+        }
+        
+        .final-cta p {
+            font-size: 1.3rem;
+            color: var(--light-gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: var(--light-gray);
+            line-height: 1.8;
+        }
+        
+        .footer-section h4 {
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-section ul li a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            color: var(--light-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
+            
+            .programs-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .widgets-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2,
+            .about-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .final-cta h2 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Dan Lok</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+            <a href="#talk" class="cta-button">Talk to Sifu Dan</a>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">World's #1 High Ticket Expert</div>
+                <h1>
+                    Master The Art Of
+                    <span>High Ticket Closing</span>
+                </h1>
+                <p class="hero-subtitle">
+                    From broke immigrant to self-made millionaire by age 27. I've trained over 500,000 students 
+                    across 150+ countries, generating billions in high-ticket sales. Now it's your turn.
+                </p>
+                <div class="hero-cta">
+                    <a href="#talk" class="cta-button">Talk To Sifu Dan Now</a>
+                    <a href="#programs" class="secondary-button">Explore Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">500K+</div>
+                <div class="stat-label">Students Worldwide</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">$100M+</div>
+                <div class="stat-label">Programs Sold</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Countries Reached</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12+</div>
+                <div class="stat-label">Best-Selling Books</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>
+                    From Hong Kong Immigrant
+                    <span>To Self-Made Millionaire</span>
+                </h2>
+                <p>
+                    I immigrated to Canada at 14 with my mother. I couldn't speak English. I was bullied. 
+                    At 17, my father went bankrupt, leaving us with nothing. I watched my mom cry, terrified 
+                    about our future.
+                </p>
+                <p>
+                    I failed at 13 businesses and was $150,000 in debt by age 21. But I refused to quit. 
+                    I found a mentor who taught me copywriting. By 27, I was a self-made millionaire. 
+                    By my 30s, an 8-figure entrepreneur.
+                </p>
+                <p>
+                    Today, I've written 12 books, been featured on Forbes, Entrepreneur, and Business Insider. 
+                    I'm the founder of multiple successful companies and managing partner of DragonX Capital. 
+                    But none of that matters as much as this: <strong>If I can do it, you can too.</strong>
+                </p>
+                <a href="#talk" class="cta-button" style="margin-top: 1rem;">Hear My Full Story</a>
+            </div>
+            <div class="about-image">
+                [Dan Lok Portrait]
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="programs-container">
+            <div class="section-header">
+                <div class="section-eyebrow">Battle-Tested Training</div>
+                <h2>Elite Certification Programs</h2>
+                <p>
+                    These aren't courses. They're transformations. Every strategy has generated 
+                    billions in real revenue. No theory. Only what works.
+                </p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">🎯</div>
+                    <h3>High Ticket Closer™</h3>
+                    <p>
+                        Master the psychology of high-ticket sales. Learn the exact closing scripts, objection 
+                        handling frameworks, and qualification methods that generate 6-7 figure incomes. 
+                        Get certified as a professional closer.
+                    </p>
+                    <a href="#talk" class="cta-button">Get Certified</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">💼</div>
+                    <h3>High Ticket Coach™</h3>
+                    <p>
+                        Build a premium coaching business that attracts ideal clients willing to pay $10K-$50K+. 
+                        Design your signature offer, master positioning, and scale to consistent 6-figure months 
+                        without ads.
+                    </p>
+                    <a href="#talk" class="cta-button">Start Coaching</a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">🚀</div>
+                    <h3>Dragon 100™</h3>
+                    <p>
+                        The premier advisory group for entrepreneurs generating 7-8 figures annually. Elite 
+                        mastermind, direct mentorship with Dan, and access to the network that accelerates 
+                        your path to 9 figures.
+                    </p>
+                    <a href="#talk" class="cta-button">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice AI Section -->
+    <section id="talk" class="voice-ai">
+        <div class="voice-ai-container">
+            <h2>
+                Talk To <span>Sifu Dan</span> Now
+            </h2>
+            <p>
+                Get instant access to Dan Lok's High Ticket Closing methodology through AI. 
+                Ask questions, get strategies, and learn the principles that have generated billions in sales.
+            </p>
+            
+            <!-- Dual Widget Container -->
+            <div class="widgets-grid">
+                
+                <!-- VAPI VOICE AI WIDGET -->
+                <div class="voice-widget-wrapper">
+                    <div class="widget-label">🎙️ Voice Coaching</div>
+                    
+                    <vapi-widget 
+                        assistant-id="ae5139c0-0f2e-4de0-b6d8-43bed24d4d43" 
+                        public-key="bf89b531-b845-4351-b50a-177a1cb65658">
+                    </vapi-widget>
+                    
+                    <p class="widget-description">
+                        <strong>Speak with Sifu Dan's AI coach.</strong> Get personalized guidance on closing 
+                        strategies, objection handling, and mindset. Just like a real coaching call.
+                    </p>
+                </div>
+                
+                <!-- THYNKWISE CHATBOT WIDGET -->
+                <div class="voice-widget-wrapper">
+                    <div class="widget-label">💬 Instant Chat</div>
+                    
+                    <div id="thynkwise-chat-placeholder" style="min-height: 450px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem;">
+                        <div style="font-size: 3rem; color: var(--gold);">💬</div>
+                        <p style="color: var(--light-gray);">ThynkWISE Chat loads here</p>
+                    </div>
+                    
+                    <p class="widget-description">
+                        <strong>Chat with Dan's AI.</strong> Get instant answers about programs, strategies, 
+                        and high-ticket methodology. Perfect for quick questions.
+                    </p>
+                </div>
+                
+            </div>
+            
+            <p style="margin-top: 4rem; font-size: 1.2rem; color: var(--white); text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+                Both AI coaches are trained on Dan Lok's complete High Ticket Closing framework. 
+                Choose voice for coaching sessions or chat for instant guidance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <div class="section-eyebrow">Real Results</div>
+                <h2>Student Success Stories</h2>
+                <p>
+                    These aren't fake testimonials. These are real people who implemented 
+                    the strategies and transformed their income.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "I pocketed $8,000 SGD as a direct reflection of using just ONE simple technique 
+                        I learned from Sifu Dan Lok. After the 7-week training, I recently closed my biggest 
+                        deal yet."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>Jack</h4>
+                            <p>High Ticket Closer™ Graduate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "I felt like Dan was the ideal mentor for me. My business was bleeding money. 
+                        Before even graduating, I started making real money. This changed everything."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>Damon</h4>
+                            <p>Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "Eighteen years running my own business, there wasn't a single day I wasn't worried 
+                        about the future. After learning this high income skill, I finally have financial confidence."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>Peyman</h4>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "This has already helped me close deals, whereas before, I would have just given up 
+                        as I didn't know how to close. I gained the confidence to take on bigger opportunities."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>Florjan</h4>
+                            <p>Coach</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "About to give up on my dreams... I decided it was time to discover a better version 
+                        of myself and my business. Removing limiting beliefs that prevented me from achieving 
+                        my dream."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>Ash</h4>
+                            <p>Consultant</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "We now have the tools as well as the blueprint to take our business to a whole new 
+                        level exponentially. Everything Dan teaches makes logical sense. He has been there 
+                        and done that."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"></div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Keith Tong</h4>
+                            <p>Medical Professional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="final-cta-container">
+            <h2>
+                You'll Never Make $100K
+                <span>With $50K Habits</span>
+            </h2>
+            <p>
+                Stop settling for mediocrity. Stop making excuses. The strategies that took me from 
+                broke immigrant to multi-millionaire are available to you right now. The question is: 
+                are you ready to do what it takes?
+            </p>
+            <a href="#talk" class="cta-button" style="font-size: 1.1rem; padding: 1.2rem 3rem;">
+                Start Your Transformation
+            </a>
+            <p style="margin-top: 2rem; font-size: 1rem; color: var(--light-gray);">
+                Text or Call: <strong style="color: var(--gold);">833-432-6565</strong> (4-Dan-Lok)
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="resources">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>DAN LOK</h3>
+                <p>
+                    Dan Lok is a bona fide social media sensation featured on FOX Business News, MSNBC, 
+                    CBC, Forbes, Inc, and Entrepreneur. Managing Partner of DragonX Capital. Chairman of 
+                    Dragon 100™. Transforming entrepreneurs worldwide.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#">High Ticket Closer™</a></li>
+                    <li><a href="#">High Ticket Coach™</a></li>
+                    <li><a href="#">Dragon 100™</a></li>
+                    <li><a href="#">Free Training</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Dan</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dan Lok Education, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- VAPI Widget Script -->
+    <script
+        src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
+        async
+        type="text/javascript"
+    ></script>
+    
+    <!-- THYNKWISE CHATBOT WIDGET -->
+    <script 
+        src="https://thynkbot.thynkwise.co.in/embed.js" 
+        data-bot-id="fab68893-45ae-41e8-9e42-912b12833684"
+    ></script>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
