@@ -842,18 +842,27 @@
             <!-- Dual Widget Container -->
             <div class="widgets-grid">
                 
-                <!-- VAPI VOICE AI WIDGET -->
+                <!-- VAPI VOICE AI LINK -->
                 <div class="voice-widget-wrapper">
                     <div class="widget-label">🎙️ Voice Coaching</div>
                     
-                    <vapi-widget 
-                        assistant-id="ae5139c0-0f2e-4de0-b6d8-43bed24d4d43" 
-                        public-key="bf89b531-b845-4351-b50a-177a1cb65658">
-                    </vapi-widget>
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 450px; gap: 2rem;">
+                        <div style="font-size: 4rem;">🎤</div>
+                        <h3 style="color: var(--gold); font-size: 1.8rem; margin: 0; text-align: center;">Talk To Sifu Dan</h3>
+                        <p style="color: var(--light-gray); text-align: center; max-width: 350px; margin: 0;">
+                            Click below to start a voice conversation with Dan Lok's AI coach
+                        </p>
+                        <a href="https://vapi.ai?demo=true&shareKey=bf89b531-b845-4351-b50a-177a1cb65658&assistantId=ae5139c0-0f2e-4de0-b6d8-43bed24d4d43" 
+                           target="_blank" 
+                           class="cta-button" 
+                           style="font-size: 1.1rem; padding: 1.2rem 2.5rem; text-decoration: none;">
+                            🎙️ Start Voice Call
+                        </a>
+                    </div>
                     
                     <p class="widget-description">
                         <strong>Speak with Sifu Dan's AI coach.</strong> Get personalized guidance on closing 
-                        strategies, objection handling, and mindset. Just like a real coaching call.
+                        strategies, objection handling, and mindset. Opens in a new window for the best experience.
                     </p>
                 </div>
                 
@@ -1053,13 +1062,6 @@
         </div>
     </footer>
 
-    <!-- VAPI Widget Script -->
-    <script
-        src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
-        async
-        type="text/javascript"
-    ></script>
-    
     <!-- THYNKWISE CHATBOT WIDGET -->
     <script 
         src="https://thynkbot.thynkwise.co.in/embed.js" 
